@@ -1,0 +1,165 @@
+{
+    "version": 2,
+    "targets": {
+      ".NETFramework,Version=v4.6": {
+        "Microsoft.IdentityModel.Clients.ActiveDirectory/3.19.4": {
+          "type": "package",
+          "compile": {
+            "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll": {},
+            "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.dll": {}
+          },
+          "runtime": {
+            "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll": {},
+            "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.dll": {}
+          }
+        },
+        "Microsoft.PowerBI.Api/2.0.12": {
+          "type": "package",
+          "dependencies": {
+            "Microsoft.Rest.ClientRuntime": "2.0.1"
+          },
+          "compile": {
+            "lib/portable-net45+win+wpa81+MonoAndroid10+MonoTouch10+xamarinios10+xamarinmac20/Microsoft.PowerBI.Api.dll": {}
+          },
+          "runtime": {
+            "lib/portable-net45+win+wpa81+MonoAndroid10+MonoTouch10+xamarinios10+xamarinmac20/Microsoft.PowerBI.Api.dll": {}
+          }
+        },
+        "Microsoft.Rest.ClientRuntime/2.0.1": {
+          "type": "package",
+          "dependencies": {
+            "Newtonsoft.Json": "6.0.8"
+          },
+          "frameworkAssemblies": [
+            "Microsoft.CSharp",
+            "System",
+            "System.Core",
+            "System.Net",
+            "System.Net.Http",
+            "System.Net.Http.WebRequest",
+            "System.Xml",
+            "mscorlib"
+          ],
+          "compile": {
+            "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
+          },
+          "runtime": {
+            "lib/net45/Microsoft.Rest.ClientRuntime.dll": {}
+          }
+        },
+        "Newtonsoft.Json/6.0.8": {
+          "type": "package",
+          "compile": {
+            "lib/net45/Newtonsoft.Json.dll": {}
+          },
+          "runtime": {
+            "lib/net45/Newtonsoft.Json.dll": {}
+          }
+        }
+      }
+    },
+    "libraries": {
+      "Microsoft.IdentityModel.Clients.ActiveDirectory/3.19.4": {
+        "sha512": "g8XOpIrqiiYlKLK3LMPGheT34AEB7KDiE8ob8M3qeJS9iixmg68yXzwPnl48b68tpGfVj324x2whSjCyAtks2A==",
+        "type": "package",
+        "path": "microsoft.identitymodel.clients.activedirectory/3.19.4",
+        "files": [
+          ".signature.p7s",
+          "lib/MonoAndroid7/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/MonoAndroid7/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/MonoAndroid7/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/MonoAndroid7/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/Xamarin.iOS10/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/net45/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "lib/netcore45/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/netcore45/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/netcore45/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/netcore45/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "lib/netstandard1.1/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/netstandard1.1/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/netstandard1.1/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/netstandard1.1/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "lib/portable-net45+win/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll",
+          "lib/portable-net45+win/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml",
+          "lib/portable-net45+win/Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
+          "lib/portable-net45+win/Microsoft.IdentityModel.Clients.ActiveDirectory.xml",
+          "microsoft.identitymodel.clients.activedirectory.3.19.4.nupkg.sha512",
+          "microsoft.identitymodel.clients.activedirectory.nuspec"
+        ]
+      },
+      "Microsoft.PowerBI.Api/2.0.12": {
+        "sha512": "Y0uJtKxVx9+luv39Jkt011pLLab5aZt4b/7GudKqD6emNAPi8oUhT0lqhHZrowNuLf/KZEk8XNiLykmTICszKw==",
+        "type": "package",
+        "path": "microsoft.powerbi.api/2.0.12",
+        "files": [
+          ".signature.p7s",
+          "lib/portable-net45+win+wpa81+MonoAndroid10+MonoTouch10+xamarinios10+xamarinmac20/Microsoft.PowerBI.Api.dll",
+          "microsoft.powerbi.api.2.0.12.nupkg.sha512",
+          "microsoft.powerbi.api.nuspec"
+        ]
+      },
+      "Microsoft.Rest.ClientRuntime/2.0.1": {
+        "sha512": "mAYqWE13TY5PEHIV7PQ6dyonkesCRWoV5v28u3o1jIUh3uJ54eEecOLfU6OB4mHbSKxPD29c3CIGlA3Em8OnIg==",
+        "type": "package",
+        "path": "microsoft.rest.clientruntime/2.0.1",
+        "files": [
+          ".signature.p7s",
+          "lib/dnxcore50/Microsoft.Rest.ClientRuntime.dll",
+          "lib/dnxcore50/Microsoft.Rest.ClientRuntime.xml",
+          "lib/net45/Microsoft.Rest.ClientRuntime.dll",
+          "lib/net45/Microsoft.Rest.ClientRuntime.xml",
+          "lib/portable-net45+win+wpa81/Microsoft.Rest.ClientRuntime.dll",
+          "lib/portable-net45+win+wpa81/Microsoft.Rest.ClientRuntime.xml",
+          "microsoft.rest.clientruntime.2.0.1.nupkg.sha512",
+          "microsoft.rest.clientruntime.nuspec"
+        ]
+      },
+      "Newtonsoft.Json/6.0.8": {
+        "sha512": "SVs8SIMUvAHuubr0AS4vj8jTnuXicFeERPtTBjTLx7fSyLp6+OpH0itRPwKIZ6uX8k6jbkYAB8bkxnxiXbh9iA==",
+        "type": "package",
+        "path": "newtonsoft.json/6.0.8",
+        "files": [
+          ".signature.p7s",
+          "lib/net20/Newtonsoft.Json.dll",
+          "lib/net20/Newtonsoft.Json.xml",
+          "lib/net35/Newtonsoft.Json.dll",
+          "lib/net35/Newtonsoft.Json.xml",
+          "lib/net40/Newtonsoft.Json.dll",
+          "lib/net40/Newtonsoft.Json.xml",
+          "lib/net45/Newtonsoft.Json.dll",
+          "lib/net45/Newtonsoft.Json.xml",
+          "lib/netcore45/Newtonsoft.Json.dll",
+          "lib/netcore45/Newtonsoft.Json.xml",
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+          "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.dll",
+          "lib/portable-net45+wp80+win8+wpa81+aspnetcore50/Newtonsoft.Json.xml",
+          "newtonsoft.json.6.0.8.nupkg.sha512",
+          "newtonsoft.json.nuspec",
+          "tools/install.ps1"
+        ]
+      }
+    },
+    "projectFileDependencyGroups": {
+      "": [],
+      ".NETFramework,Version=v4.6": [
+        "Microsoft.IdentityModel.Clients.ActiveDirectory >= 3.19.4",
+        "Microsoft.PowerBI.Api >= 2.0.12"
+      ]
+    },
+    "tools": {},
+    "projectFileToolGroups": {},
+    "packageFolders": {
+      "C:\\home\\data\\Functions\\packages\\nuget": {}
+    }
+  }
