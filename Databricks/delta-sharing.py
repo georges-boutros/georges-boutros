@@ -18,7 +18,7 @@ import os
 import delta_sharing
 
 # Point to the profile file. It can be a file on the local file system or a file on a remote storage.
-profile_file = "https://github.com/georges-boutros/georges-boutros/blob/0979877f6e7d7de5ed0c2bd504492b01d96fb147/Databricks/powerbi_share.share"
+profile_file = "https://github.com/georges-boutros/georges-boutros/blob/56ab4f3235e8e32fe3ca72ebbe5271ab02e2fb5e/Databricks/powerbi_share.share"
 
 # Create a SharingClient.
 client = delta_sharing.SharingClient(profile_file)
