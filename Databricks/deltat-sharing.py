@@ -18,7 +18,7 @@ import os
 import delta_sharing
 
 # Point to the profile file. It can be a file on the local file system or a file on a remote storage.
-profile_file = os.path.dirname(__file__) + "/../open-datasets.share"
+profile_file = "C:\Users\g-boutros\OneDrive - Arte Geie\DataLake - Azure - Power BI\github\georges-boutros\Databricks\powerbi_share.share"
 
 # Create a SharingClient.
 client = delta_sharing.SharingClient(profile_file)
@@ -29,10 +29,10 @@ print(client.list_all_tables())
 
 # Create a url to access a shared table.
 # A table path is the profile file path following with `#` and the fully qualified name of a table (`<share-name>.<schema-name>.<table-name>`).
-table_url = profile_file + "#delta_sharing.default.owid-covid-data"
+table_url = profile_file + "#powerbi_share.program.program_active_stock"
 
 # Fetch 10 rows from a table and convert it to a Pandas DataFrame. This can be used to read sample data from a table that cannot fit in the memory.
-print("########### Loading 10 rows from delta_sharing.default.owid-covid-data as a Pandas DataFrame #############")
+print("########### Loading 10 rows from powerbi_share.program.program_active_stock as a Pandas DataFrame #############")
 data = delta_sharing.load_as_pandas(table_url, limit=10)
 
 # Print the sample.
@@ -40,9 +40,9 @@ print("########### Show the fetched 10 rows #############")
 print(data)
 
 # Load a table as a Pandas DataFrame. This can be used to process tables that can fit in the memory.
-print("########### Loading delta_sharing.default.owid-covid-data as a Pandas DataFrame #############")
+print("########### Loading from powerbi_share.program.program_active_stock as a Pandas DataFrame #############")
 data = delta_sharing.load_as_pandas(table_url)
 
 # Do whatever you want to your share data!
 print("########### Show Data #############")
-print(data[data["iso_code"] == "USA"].head(10))
+print(data[data["program"] == "055155-002-A"].head(10))
