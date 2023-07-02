@@ -18,7 +18,7 @@ import os
 import delta_sharing
 
 # Point to the profile file. It can be a file on the local file system or a file on a remote storage.
-profile_file = "C:\Users\g-boutros\OneDrive - Arte Geie\DataLake - Azure - Power BI\github\georges-boutros\Databricks\powerbi_share.share"
+profile_file = "https://github.com/georges-boutros/georges-boutros/blob/0979877f6e7d7de5ed0c2bd504492b01d96fb147/Databricks/powerbi_share.share"
 
 # Create a SharingClient.
 client = delta_sharing.SharingClient(profile_file)
@@ -46,3 +46,12 @@ data = delta_sharing.load_as_pandas(table_url)
 # Do whatever you want to your share data!
 print("########### Show Data #############")
 print(data[data["program"] == "055155-002-A"].head(10))
+
+shares = client.list_shares()
+ 
+for share in shares:
+  schemas = client.list_schemas(share)
+  for schema in schemas:
+    tables = client.list_tables(schema)
+    for table in tables:
+      print(f'name = {table.name}, share = {table.share}, schema = {table.schema}')
