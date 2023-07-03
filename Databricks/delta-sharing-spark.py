@@ -16,10 +16,11 @@
 
 import os
 import delta_sharing
+from pyspark.sql import SparkSession
 
 # Point to the profile file. It can be a file on the local file system or a file on a remote storage.
-profile_file = "https://github.com/ArteGEIE/datalakehouse-share/blob/61c7183542a3c5fc4d4ee0580742df7faae35187/powerbi_share.share"
-
+#profile_file = os.path.dirname(__file__) + "/../open-datasets.share"
+profile_file = "C:/Users/g-boutros/OneDrive - Arte Geie\DataLake - Azure - Power BI/github/datalakehouse-share/powerbi_share.share"
 # Create a SharingClient.
 client = delta_sharing.SharingClient(profile_file)
 
@@ -31,10 +32,22 @@ print(client.list_all_tables())
 # A table path is the profile file path following with `#` and the fully qualified name of a table (`<share-name>.<schema-name>.<table-name>`).
 table_url = profile_file + "#powerbi_share.program.program_active_stock"
 
-# Fetch 10 rows from a table and convert it to a Pandas DataFrame. This can be used to read sample data from a table that cannot fit in the memory.
-print("########### Loading 10 rows from powerbi_share.program.program_active_stock as a Pandas DataFrame #############")
-data = delta_sharing.load_as_pandas(table_url, limit=10)
+# Create Spark with delta sharing connector
+spark = SparkSession.builder \
+	.appName("delta-sharing-demo") \
+	.master("local[*]") \
+	.getOrCreate()
 
-# Print the sample.
-print("########### Show the fetched 10 rows #############")
-print(data)
+# Read data using format "deltaSharing"
+print("########### Loading powerbi_share.program.program_active_stock with Spark #############")
+df1 = spark.read.format("deltaSharing").load(table_url) \
+	.where("program == '055155-002-A'") \
+	.select("program", "title_o", "case_f","last_estimated_delivery_date") \
+	.show()
+
+# Or if the code is running with PySpark, you can use `load_as_spark` to load the table as a Spark DataFrame.
+print("########### Loading delta_sharing.default.owid-covid-data with Spark #############")
+data = delta_sharing.load_as_spark(table_url)
+data.where("program == '055155-002-A'") \
+	.select("program", "title_o", "case_f","last_estimated_delivery_date") \
+    .show()
