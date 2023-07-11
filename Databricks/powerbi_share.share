@@ -1,3 +1,4 @@
-{"shareCredentialsVersion":1,"bearerToken":"p7XRI_wDJC4eOBqIe-uzk6ihKbACUI8xOV-0cE2Vvpk7FF4V21vHbVfZVLgOrKUF",
+{"shareCredentialsVersion":1,
+"bearerToken":"zwnzOndYgVkrbv9shdlKHXEBxSP9WAptQfNMecID9lM_YhSo6y74bUEG6dh83OCr",
 "endpoint":"https://westeurope-c2.azuredatabricks.net/api/2.0/delta-sharing/metastores/8c00cfd4-8122-488f-be12-f41b082d9074",
-"expirationTime":"2023-07-04T11:35:42.614Z"}
+"expirationTime":"2023-08-03T12:28:29.448Z"}

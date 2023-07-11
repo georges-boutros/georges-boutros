@@ -1,0 +1,11 @@
+{
+    "frameworks": {
+      "net46":{
+        "dependencies": {
+          "Microsoft.IdentityModel.Clients.ActiveDirectory": "4.5.0",
+          "Microsoft.PowerBI.Api": "2.7.0",
+          "Microsoft.Rest.ClientRuntime": "2.3.18"
+        }
+      }
+     }
+  }

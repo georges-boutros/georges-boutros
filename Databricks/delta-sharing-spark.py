@@ -39,7 +39,7 @@ spark = SparkSession.builder \
 	.getOrCreate()
 
 # Read data using format "deltaSharing"
-print("########### Loading powerbi_share.program.program_active_stock with Spark #############")
+print("########### Loading powerbi_share.program_active_stock with Spark #############")
 df1 = spark.read.format("deltaSharing").load(table_url) \
 	.where("program == '055155-002-A'") \
 	.select("program", "title_o", "case_f","last_estimated_delivery_date") \
